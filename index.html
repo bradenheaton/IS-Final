@@ -111,9 +111,10 @@
     }
 
     .tableau-container .tableauViz {
-      width: 200px; /* Half the size */
-      height:300px;
+      width: 400px; /* Fixed square width */
+      height: 400px; /* Fixed square height */
       margin: 0 auto;
+      box-sizing: border-box;
     }
   </style>
 </head>
@@ -196,8 +197,8 @@
     <script type='text/javascript'>
       var divElement = document.getElementById('viz1734539593700');
       var vizElement = divElement.getElementsByTagName('object')[0];
-      vizElement.style.width = '100%';
-      vizElement.style.height = 'auto';
+      vizElement.style.width = '400px'; // Fixed square width
+      vizElement.style.height = '400px'; // Fixed square height
       var scriptElement = document.createElement('script');
       scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
       vizElement.parentNode.insertBefore(scriptElement, vizElement);
