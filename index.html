@@ -21,10 +21,26 @@
       margin: 15px;
     }
 
-    .right-image {
-      float: right;
+    .center-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 600px;
+    }
+
+    .float-image {
+      float: center;
+      margin-right: 20px;
       margin-left: 20px;
-      width: 300px;
+      width: 450px;
+    }
+
+    .boxed-paragraph {
+      color: black;
+      background-color: lightblue;
+      border: 2px solid black;
+      padding: 15px;
+      margin: 20px 0;
     }
 
     ul, ol {
@@ -38,21 +54,76 @@
       clear: both;
     }
 
+    .video-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .top-links {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .top-links a {
+      font-size: 18px;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+
+    .top-links a.green-link {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .top-links a.green-link:hover {
+      background-color: #45a049;
+    }
+
+    .top-links a.blue-link {
+      background-color: #2196F3;
+      color: white;
+    }
+
+    .top-links a.blue-link:hover {
+      background-color: #0b7dda;
+    }
+
+    .bottom-anchor {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .bottom-anchor a {
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+    }
+
     .tableau-container {
-      margin-top: 50px;
+      margin-top: 100px;
       text-align: center;
     }
 
     .tableau-container .tableauViz {
-      width: 400px;
-      height: 400px;
+      width: 200px; /* Half the size */
+      height:300px;
       margin: 0 auto;
-      display: block;
-      box-sizing: border-box;
     }
   </style>
 </head>
 <body>
+  <div class="top-links">
+    <a href="aiwebapp.html" class="green-link" target="_blank">Game</a>
+    <a href="index%20(2).html" class="green-link" target="_blank">Resume</a>
+    <a href="https://en.wikipedia.org/wiki/Lionel_Messi" class="blue-link" target="_blank">Wikipedia</a>
+  </div>
+
   <h1>Lionel Messi: Soccer Legend</h1>
   <div class="clearfix">
     <a id="bio"></a>
@@ -61,28 +132,46 @@
     </p>
   </div>
 
-  <h3>Accomplishments</h3>
-
-  <div class="clearfix">
-    <img class="right-image" src="messi trophies.jfif" alt="Messi and all his trophies">
-    <strong>Championships</strong>
-    <ul>
-      <li>World Cup 2022</li>
-      <li>UEFA Champions League</li>
-      <li>Olympic Gold Medal</li>
-    </ul>
+  <div class="boxed-paragraph">
+    <p>
+      Lionel Messi's career is defined by moments of sheer brilliance that have etched his name in football history. One of his most iconic moments came in 2009 when he scored a stunning header in the UEFA Champions League final against Manchester United, helping Barcelona secure the title. Another unforgettable moment was his stunning solo goal against Real Madrid in 2017, where he dribbled past multiple defenders and finished with precision, a testament to his exceptional dribbling and finishing skills. Messi also led Argentina to victory in the 2021 Copa América, ending a 28-year trophy drought for his national team and cementing his legacy as one of the greatest players to ever play the game.
+    </p>
   </div>
 
-  <div class="clearfix">
-    <img class="right-image" src="young messi.jfif" alt="Messi after winning his first La Liga Championship">
-    <strong>Individual Awards</strong>
-    <ol>
-      <li>8x Ballon D'or</li>
-      <li>Golden Boot</li>
-      <li>La Liga MVP</li>
-      <li>FIFA World Cup 2022 Golden Ball</li>
-      <li>Copa América 2021 MVP</li>
-    </ol>
+  <h3>Accomplishments</h3>
+
+  <div class="accomplishments-list">
+    <div class="accomplishments-text">
+      <strong>Championships</strong>
+      <ul>
+        <li>World Cup 2022</li>
+        <li>UEFA Champions League</li>
+        <li>Olympic Gold Medal</li>
+      </ul>
+    </div>
+    <div class="accomplishments-images">
+      <img class="float-image" src="messi trophies.jfif" alt="Messi and all his trophies">
+    </div>
+  </div>
+
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oEbxggp2CVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div class="accomplishments-list">
+    <div class="accomplishments-text">
+      <strong>Individual Awards</strong>
+      <ol>
+        <li>8x Ballon D'or</li>
+        <li>Golden Boot</li>
+        <li>La Liga MVP</li>
+        <li>FIFA World Cup 2022 Golden Ball</li>
+        <li>Copa América 2021 MVP</li>
+      </ol>
+    </div>
+    <div class="accomplishments-images">
+      <img class="float-image" src="young messi.jfif" alt="Messi after winning his first La Liga Championship">
+    </div>
   </div>
 
   <div class="tableau-container">
@@ -113,6 +202,10 @@
       scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
       vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script>
+  </div>
+
+  <div class="bottom-anchor">
+    <a href="#bio">Messi's Bio (Click Me)</a>
   </div>
 </body>
 </html>
